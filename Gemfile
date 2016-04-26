@@ -15,7 +15,7 @@ end
 
 gem 'jquery-rails'
 gem 'test-unit', '~> 3.0'
-
+gem 'jquery-ui-rails'
 
 gem "friendly_id", "~> 4.0.10.1"
 
