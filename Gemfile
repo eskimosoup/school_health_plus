@@ -16,7 +16,7 @@ end
 gem 'jquery-rails'
 gem 'test-unit', '~> 3.0'
 gem 'jquery-ui-rails'
-gem 'bcrypt-ruby', '~> 3.1', '>= 3.1.5'
+gem 'bcrypt-ruby', '~> 3.0'
 
 gem "friendly_id", "~> 4.0.10.1"
 
