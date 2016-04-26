@@ -1,0 +1,21 @@
+<div class="box">
+  <div class="padding">
+  <h1><%= title(@title) %></h1>
+  
+  <% if @case_study.video_url? %>
+    <div class="image_left"><%= @case_study.video_url.html_safe %></div>
+  <% elsif @case_study.image? %>
+    <%= image_tag(@case_study.image.show, :alt => @case_study.image_alt, :title => @case_study.image_alt, :class => "image_left") %>
+  <% end %>
+  
+  <%= @case_study.content.html_safe %>
+  
+  <hr />
+  
+  <p align="right"><%= link_to "See all case studies", case_studies_path %></p>
+  </div>
+</div>
+
+<% content_for :right do %>
+  
+<% end %>

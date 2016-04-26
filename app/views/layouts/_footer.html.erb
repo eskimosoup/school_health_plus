@@ -1,0 +1,17 @@
+<div class="footer">
+  <div class="footer_links">
+    <div class="footer_left">
+      <p>
+        &copy; <%= h(SITE_SETTINGS["Name (Footer)"]) %> | <%= link_to "Web design by eskimosoup", "http://www.eskimosoup.co.uk", {:target => "_blank"} %>
+      </p>
+    </div>
+    <div class="footer_right">
+      <p>
+        <% Willow::Tree.find_by_name("Footer").branches.position.each_with_index do |branch, i| %>
+          <%= "/" unless i.zero? %>
+          <%= link_to branch.name, branch.try(:destination) %>
+        <% end %>
+      </p>
+    </div>
+  </div> 
+</div>

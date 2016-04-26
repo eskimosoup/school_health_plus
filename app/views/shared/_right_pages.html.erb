@@ -1,0 +1,12 @@
+<% if @right_pages %>
+    <% @right_pages.each do |page| %>
+      <div class="box">
+      	<div class="padding">
+          <h2><%= link_to page.title, page %></h2>
+          <% if page.image? %>
+            <%= image_tag(page.image.right.url, :width=>"247") %>
+          <% end %>
+        </div>
+    	</div>  
+    <% end %>
+<% end %>

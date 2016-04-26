@@ -1,0 +1,56 @@
+<%= form_for([:admin, @case_study]) do |f| %>
+  
+  <%= f.error_messages %>
+  
+  <%= field_set_tag("Basic Information") do %>
+    
+    <div class="field">
+      <%= f.label :title %><br />
+      <%= f.text_field :title %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :summary %><br />
+      <%= f.text_area :summary %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :content %><br />
+      <%= f.text_area :content, :class => "tinymce" %>
+    </div>
+    
+  <% end %>
+  
+  <%= field_set_tag("Image") do %>
+    
+    <div class="field">
+      <%= f.image_field :image %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :image_alt %><br />
+      <%= f.text_field :image_alt %>
+    </div>
+    
+  <% end %>
+  
+  <%= field_set_tag("Video URL") do %>
+    
+    <div class="field">
+      <%= f.text_area :video_url %>
+    </div>
+    
+  <% end %>
+  
+  <div class="field">
+    <%= f.check_box :display %>
+    <%= f.label :display %>
+  </div>
+  
+  <br />
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  
+<% end %>

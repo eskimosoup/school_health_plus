@@ -1,0 +1,32 @@
+<div class="content_left">
+  <% if @page.image? %>
+    <div class="box">
+      <%= image_tag(@page.image.show, :alt => "#{@page.title}", :title => "#{@page.title}", :width=>"632", :height=>"266") %>
+    </div>
+  <% end %>
+
+  <div class="box">
+    <div class="padding">
+    	<h1><%= @page.title %></h1>
+		  <%= @page.content.html_safe %>
+      <div class="clear"></div>
+	  </div>
+  </div>
+</div>
+
+<div class="right" id="right_nav">
+  <% if @right_pages %>
+    <% @right_pages.each do |page| %>
+      <div class="box">
+    <div class="padding">
+      <% if @page == page %>
+        <h2><%= link_to page.title, page, :class => 'highlight' %></h2>
+      <% else %>
+        <h2><%= link_to page.title, page %></h2>
+      <% end %>
+      <%= shorten page.summary, 100 %>
+       </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>

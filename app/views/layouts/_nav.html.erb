@@ -1,0 +1,19 @@
+<div class="navigation">
+  <% Willow::Tree.find_by_name('Main').branches.roots.position.each do |branch| %>
+    <% options = {} %>
+    <% if @current_leaf and (@current_leaf.branch == branch or @current_leaf.branch.parent == branch) %>
+      <% options.merge!({:class => 'highlight'}) %>
+    <% end %>
+    <% unless branch.access_key.blank? %>
+      <% options.merge!({:accesskey => branch.access_key}) %>
+    <% end %>
+    <%= link_to branch.name, branch.destination, options %>
+  <% end %>
+
+  <div class="top_form">
+    <%= form_tag(search_path) do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag 'Search', :class=>"submit" %>
+    <% end %>
+  </div>
+</div>

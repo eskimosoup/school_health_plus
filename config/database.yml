@@ -1,0 +1,19 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: nhs_hull_school_health_plus_development
+  pool: 5
+  username: root
+  password: tmedia
+  socket: /tmp/mysql.sock
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: schoolhe_schoolhe
+  pool: 5
+  username: schoolhe_schoolh
+  password: healthy47#!
+  socket: /tmp/mysql.sock

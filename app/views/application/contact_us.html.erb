@@ -1,0 +1,50 @@
+
+<div style="float: left; width: 450px;">
+  
+  <div class="box">
+    <div class="padding">
+      <h1><%= title(@page.name) %></h1>
+      	<% if @page.image? %>
+						<%= image_tag(@page.image.show, {:alt => @page.image_alt, :title => @page.image_alt}, :class=>"image_left") %>
+        <% end %>
+			<%= raw(@page.content) %>
+      <div class="clear"></div>
+    </div>  
+  </div>
+</div>  
+
+<div style="float: right; width: 450px;">
+  <div class="box">
+    <div class="padding">
+    
+  <% if flash[:alert] %>
+    <p><%= flash[:alert] %></p>
+  <% end %>
+    
+  <%= form_tag do %>
+    <div class="field">
+      <%= label_tag :name, "Name *" %>
+      <%= text_field_tag :name, params[:name] %>
+    </div>
+    <div class="field">
+      <%= label_tag :telephone %>
+      <%= text_field_tag :telephone, params[:telephone] %>
+    </div>
+    <div class="field">
+      <%= label_tag :email %>
+      <%= text_field_tag :email, params[:email] %>
+    </div>
+    <div class="field">
+      <%= label_tag :enquiry, "Enquiry *" %>
+      <%= text_area_tag :enquiry, params[:enquiry], {:rows => 5, :cols => 30} %>
+    </div>	
+    <div class="actions">
+      <%= submit_tag "Submit" %>
+    </div>
+    <br />
+    <p>* Required fields</p>
+  <% end %>
+  	</div>
+  </div>
+  
+</div>

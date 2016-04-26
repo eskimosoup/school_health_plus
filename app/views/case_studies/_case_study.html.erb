@@ -1,0 +1,10 @@
+<div>
+  <% if case_study.video_url? %>
+    <%= case_study.video_url.html_safe %>
+    <p><%= shorten(case_study.summary, 75) %></p>
+  <% elsif case_study.image? %>
+    <%= image_tag(case_study.image.index, :alt => case_study.image_alt, :title => case_study.image_alt, :width=>"220", :height=>"175") %>
+    <p><%= shorten(case_study.summary, 300) %></p>
+  <% end %>
+  <p align="right"><%= link_to "more", case_study %></p>
+</div>

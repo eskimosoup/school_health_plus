@@ -1,0 +1,107 @@
+@import "variables";
+
+
+/*--Main--*/
+
+body {
+	font-family: $main_font; 
+	font-size: 12px;
+	color: #666666; 
+}
+
+
+p {
+	margin: 0px; 
+	padding: 8px 0px 8px 0px;
+}
+
+
+hr {
+	border: 0px; 
+	border-bottom: 1px solid #e1e1e1; 
+	height: 0px; 
+	clear: left; 
+	margin: 0px 0px 10px 0px; 
+	padding: 10px 0px 0px 0px;
+}
+
+
+/*--Links--*/
+
+a {
+  color: $green;
+	text-decoration: none;
+	font-weight: bold;
+  &:visited, &:active {color: $green;}
+	&:hover {color: #666666; text-decoration: underline; font-weight: bold;}
+}
+
+
+/*--Titles--*/
+h1, h2, h3 {
+	color: $green;
+	font-weight: bold;
+	
+	a {
+		color: $green;
+		&:visited, &:active {color: $green;}
+		&:hover {color: #666666;}
+	}
+}
+
+h1 {
+	font-size: 24px; 
+	margin: 0px 0px 10px 0px; 
+	padding: 0px;
+	line-height: normal;
+}
+
+h2 {
+	font-size: 16px; 
+	margin: 12px 0px 0px 0px; 
+	padding: 12px 0px 0px 0px;
+	line-height: normal;
+}
+
+h3 {
+	font-size: 14px; 
+	margin: 8px 0px 0px 0px; 
+	padding: 8px 0px 0px 0px;
+	line-height: normal;
+}
+
+
+/*--Image Styles--*/
+.image_left {
+	border: 1px solid #CCCCCC; 
+	float: left; 
+	margin: 12px 18px 8px 0px;
+}
+
+.image_right {
+	border: 1px solid #CCCCCC; 
+	float: right; 
+	margin: 12px 0px 8px 18px;
+}
+
+
+/*--Font Styles--*/
+.highlight_box {
+	background-color: $green;
+	color: #FFFFFF;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold;
+	padding: 10px 20px 10px 20px;
+	margin: 20px;
+}
+
+.introduction {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.font_aqua {
+	color: $aqua;
+}

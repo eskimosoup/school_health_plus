@@ -1,0 +1,10 @@
+<% title("Case Studies") %>
+
+<div class="admin_functions">
+  <%= link_to "New Case Study", new_admin_case_study_path %>
+</div>
+
+<%= informant_table @case_studies, {
+      :headings => ['', 'Title',  'Displayed?', '', '', ''], 
+      :body     => [it_sort, :title, it_ajax_toggle(:display), it_edit_images, it_edit, it_destroy]
+    } %>

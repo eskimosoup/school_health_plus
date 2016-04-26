@@ -1,0 +1,40 @@
+@import "variables";
+
+/*--Footer--*/
+
+.footer {
+	clear: both;
+	height: 40px;
+	background-image: url(footer_bg.gif);
+	background-repeat: no-repeat;
+}
+
+.footer_links {	 
+	padding: 15px 20px 0px 20px;
+	height: 35px;
+	color: #cccccc; 
+	font-size: 10px; 
+	background-color: #000000;
+	
+		p {
+			margin: 0px; 
+			padding: 2px 0px 2px 0px;
+		}
+		
+		a {
+			color: #cccccc; 
+			text-decoration: none; 
+			font-weight: normal;
+			&:visited, &:active {color: #cccccc;}
+			&:hover, &.highlight, &.highlight:active, &.highlight:hover, &.highlight:visited {color: #fffff; text-decoration: underline;}
+		}
+} 
+
+
+.footer_left {
+	float: left;
+}
+
+.footer_right {
+	float: right;
+}

@@ -1,0 +1,69 @@
+@import "variables";
+
+/*--Boxes--*/
+
+.padding {
+	border: 1px solid #cccccc;
+	padding: 10px;
+	height: 1%
+}
+
+.box {
+	border: 5px solid #e1e1e1;
+	margin-bottom: 18px;
+	
+		h2.title_long  {
+			background-repeat: repeat-x;
+			background-image: url(title_default_bg.gif);
+			height: 42px;
+			width: 590px;
+			padding: 7px 0px 0px 55px;
+			color: #FFFFFF;
+			position: relative;
+			top: 0px;
+			left: -25px;
+			font-size: 18px;
+			line-height: 20px;	
+			margin: 0px -35px 0px 0px;
+		}
+		
+		.col {
+			float: left;
+			display: inline;
+			width: 161px;
+			font-size: 11px;
+			color: #666666;
+			line-height: 16px;
+			margin: 15px 21px 0px 21px;
+			height: 233px;
+		}
+}
+
+.right .box h2  {
+	background-repeat: repeat-x;
+	background-image: url(title_default_bg.gif);
+	height: 42px;
+	width: 227px;
+	padding: 7px 0px 0px 55px;
+	margin: 0px -35px 0px 0px;
+	color: #FFFFFF;
+	position: relative;
+	top: 0px;
+	left: -25px;
+	font-size: 18px;
+	line-height: 20px;	
+}
+
+#right_nav .box h2 {
+	font-size: 16px;
+}
+
+h2.title_long, .right .box h2 {
+	a {
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: bold;
+		&:visited, &:active {color: #fffff;}
+		&:hover, &.highlight, &.highlight:active, &.highlight:hover, &.highlight:visited {color: #ffffff; text-decoration: underline; font-weight: bold;}
+	}
+}

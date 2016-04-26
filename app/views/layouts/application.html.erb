@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  <%= render 'layouts/head' %>
+  
+  <body>
+    
+    <div class="main_container">
+
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/nav' %>
+
+      <div id="content">
+        <% unless hide_flash? %>
+          <% flash.each do |name, msg| %>
+            <%= content_tag :div, msg, :id => "flash_#{name}" %>
+          <% end %>
+        <% end %>
+        
+        <%= yield %>
+        
+        <div class="clear"></div>
+      </div>
+
+      <%= render 'layouts/footer' %>
+
+    </div>
+  </body>
+</html>

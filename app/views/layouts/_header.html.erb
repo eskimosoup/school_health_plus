@@ -1,0 +1,31 @@
+<div class="top">
+  <div class="top_left">
+      
+      <div class="top_widgets">
+        <span class="date_top" id="date">
+          <%= Time.now.strftime("%a %d %B %Y") %>
+        </span>
+        <span class="time" id="time">
+          <%= Time.now.strftime("%H:%M:%S") %>
+        </span>
+      </div>
+      
+      <div class="top_links_left">
+        <% Willow::Tree.find_by_name("Top").branches.position.each_with_index do |branch, i| %>
+          <%= "|" unless i.zero? %>
+          <%= link_to branch.name, branch.try(:destination), {:accesskey => branch.access_key} %>
+        <% end %>
+      </div>
+        
+      <div class="clear"></div>
+      <%= link_to image_tag("logo_providing_quality_care.gif", :alt => "Providing Quality Care, School Nurse+", :title => "Providing Quality Care, School Nurse+"), root_url %>
+      
+  </div>
+
+  <div class="top_links_right">
+    <%= link_to "Procurement", "http://www.chcphull.nhs.uk/pages/tenders", {:target => "_blank"} %> |
+    <%= link_to "Staff Login", "http://www.chcpintranet.nhs.uk/", {:target => "_blank"} %>
+    <p><%= link_to image_tag("logo_nhs_chcp.gif", :alt => "NHS City Health Care Partnership", :title => "NHS City Health Care Partnership"), root_url %></p>
+  </div>
+  
+</div>  

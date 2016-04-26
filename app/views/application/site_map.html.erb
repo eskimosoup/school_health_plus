@@ -1,0 +1,13 @@
+<h1><%= title(@branch.name) %></h1>
+
+<ul>
+  <% @branches.each do |branch| %>
+    <li>
+      <%= ("&nbsp;&nbsp;&nbsp;&nbsp;" * branch.depth).html_safe %><%= link_to branch.name, branch.destination %>
+    </li>
+  <% end %>
+</ul>
+
+<% content_for :right do %>
+  
+<% end %>

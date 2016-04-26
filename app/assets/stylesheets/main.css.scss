@@ -1,0 +1,211 @@
+@import "variables";
+
+/* Main */
+body {
+	@include zero;
+	text-align: center;
+}
+	
+.main_container {
+	text-align: left;
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 938px;
+}
+
+img {
+	@include zero;
+}
+
+a {
+	overflow: hidden;
+	outline: none;
+}
+
+.clear {
+	clear: both;
+  height: 0px;
+  overflow: hidden;
+}
+
+/* Layout */
+#content {
+	padding: 30px 0px 20px 0px;
+	line-height: 19px;	
+}
+
+.content_left {
+	width: 642px;
+	float: left;
+}
+
+.right {
+	float: right;
+	width: 279px;
+}
+
+/* Forms */
+form {
+	@include zero;
+	margin-top: 20px;
+}
+
+form p, .field {
+	margin: 0px 0px 15px 0px; 
+	padding: 0px;
+}
+
+form label {
+	color: #333333;
+	font-size: 12px;
+	line-height: 17px;
+	float: left;
+	width: 100px;
+}
+
+form input, form textarea, form select {
+	font-family: $main_font;
+	font-size: 12px;
+	line-height: 17px;
+	color: #333333;
+	padding: 7px;
+	border: 1px solid #999999;
+	background-color: #FFFFFF;
+	width: 260px;
+	background-image: url(form_input_bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+input.x_small {width: 20px;}
+input.small {width: 60px;}
+input.medium {width: 150px;}
+input.large {width: 400px;}
+
+form select {
+	width: auto;
+}
+
+form textarea {
+	background-color: #e5e5e5; 
+	height: 150px; 
+}
+
+form input.check_box, form input.checkbox, form input.radio_button {
+	color: #333333; 
+	background-color: transparent; 
+	border: 0px; 
+	width: 14px;
+}
+
+.actions input, form input.submit {
+	width: auto; 
+	color: #FFFFFF;  
+	background-color: #333333; 
+	border: 0px; 
+	padding: 0px 4px 0px 4px; 
+	font-weight: normal;
+	background-image: url(form_button_bg.gif);
+	background-repeat: repeat-x;
+	cursor: pointer;
+	font-family: $main_font;
+	height: 30px;
+	font-size: 16px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+}
+
+.actions input {
+	margin-left: 100px;
+}
+
+.actions input:hover {
+	background-color: #000000;
+}
+
+.field_with_errors {
+	display: inline-block;
+}
+
+/* Tables */
+table, tr, td {
+	font-family: $main_font; 
+	font-size: 12px;
+	border: 1px solid #333333;
+}
+
+table {
+	border-collapse: collapse; 
+	margin: 10px 0px 10px 0px;
+}
+
+td, th {
+	text-align: left; 
+	padding: 8px; 
+}
+
+td {
+	vertical-align: top;
+}
+
+
+/* Flash Notices */
+#flash_notice {
+	background-color: #f2fcf2;
+	border: solid 1px #009966;
+  color: #009966;  
+	padding: 5px 8px;
+  margin: 10px 0px;
+}
+
+#flash_alert {
+  background-color: #FFC2C2;
+	border: solid 1px #990000;
+  color: #990000;  
+	padding: 5px 8px;
+  margin: 10px 0px;
+}
+
+#error_explanation {
+	padding: 5px 8px;
+  margin: 10px 0px;
+	ul {
+	background-color: #FFC2C2;
+  border: solid 1px #990000;
+  color: #990000;
+	margin: 0px;
+	padding: 10px 10px 10px 40px;
+	}
+	h2 {@include zero; font-size: 14px; font-weight: bold; color: #990000;}
+}
+
+/*--Case Studies Page--*/
+.case_studies_list {
+	margin-left: 30px;
+	color: #FFFFFF;
+	font-size: 13px;
+	line-height: 17px;
+	
+	div {
+		background-color: $green;
+		height: 285px;
+		width: 220px;
+		padding: 5px;
+		float: left;
+		margin: 30px 23px;
+	}
+	
+	p {
+		padding: 8px 10px 0px 10px;
+	}
+	
+	a {
+		color: #ffffff;
+		text-decoration: none;
+		font-weight: bold;
+		&:visited, &:active {color: #ffffff;}
+		&:hover {color: #ffffff; text-decoration: underline; font-weight: bold;}
+	}
+}

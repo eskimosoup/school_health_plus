@@ -1,0 +1,27 @@
+<h1><%= title(@title) %></h1>
+
+<% unless @case_studies.empty? and @pages.empty? %>
+  <div class="case_studies_list">
+    <% @pages.each do |page| %>
+      <div>
+        <% if page.image? %>
+          <%= image_tag(page.image.index, :alt => page.image_alt, :title => page.image_alt, :class => "image_right") %>
+        <% end %>
+        <p><%= shorten(page.summary, 300) %></p>
+        <%= link_to "More", page %>
+      </div>
+    <% end %>
+
+    <% @case_studies.each do |case_study| %>
+      <div>
+        <% if case_study.image? %>
+          <%= image_tag(case_study.image.index, :alt => case_study.image_alt, :title => case_study.image_alt, :class => "image_right") %>
+        <% end %>
+        <p><%= shorten(case_study.summary, 300) %></p>
+        <%= link_to "More", case_study %>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+	<p>No case studies to display.</p>
+<% end %>
