@@ -19,7 +19,7 @@ gem 'test-unit', '~> 3.0'
 
 gem "friendly_id", "~> 4.0.10.1"
 
-gem 'informant', :git => 'git@github.com:eskimosoup/informant.git', branch: "rails_3"
-gem 'chronicler', :git => 'git@github.com:eskimosoup/chronicler.git', branch: "rails_3"
-gem 'willow', :git => 'git@github.com:eskimosoup/willow.git', branch: "rails_3"
-gem 'manticore', :git => 'git@github.com:eskimosoup/manticore.git', branch: "rails_3"
+gem 'informant', :git => 'git@github.com:eskimosoup/informant.git', :branch => "rails_3"
+gem 'chronicler', :git => 'git@github.com:eskimosoup/chronicler.git', :branch => "rails_3"
+gem 'willow', :git => 'git@github.com:eskimosoup/willow.git', :branch => "rails_3"
+gem 'manticore', :git => 'git@github.com:eskimosoup/manticore.git', :branch => "rails_3"
