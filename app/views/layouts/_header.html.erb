@@ -11,7 +11,7 @@
       </div>
       
       <div class="top_links_left">
-        <% Willow::Tree.find_by_name("Top").branches.position.each_with_index do |branch, i| %>
+        <% Willow::Branch.where(:tree => "Top").order(:position).each_with_index do |branch, i| %>
           <%= "|" unless i.zero? %>
           <%= link_to branch.name, branch.try(:destination), {:accesskey => branch.access_key} %>
         <% end %>

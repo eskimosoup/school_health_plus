@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120328094139) do
+ActiveRecord::Schema.define(:version => 20160426115552) do
 
   create_table "case_studies", :force => true do |t|
     t.string   "title"
@@ -69,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20120328094139) do
   add_index "pages", ["slug"], :name => "index_pages_on_slug", :unique => true
 
   create_table "willow_branches", :force => true do |t|
-    t.integer "tree_id"
+    t.string  "tree"
     t.string  "name"
     t.integer "position",              :default => 0
     t.string  "ancestry"
@@ -78,6 +79,9 @@ ActiveRecord::Schema.define(:version => 20120328094139) do
     t.integer "leaf_id"
     t.string  "leaf_type"
     t.string  "access_key"
+    t.boolean "sturdy",                :default => false
+    t.boolean "can_have_children",     :default => false
+    t.boolean "primary",               :default => false
   end
 
   add_index "willow_branches", ["ancestry"], :name => "index_willow_branches_on_ancestry"
@@ -86,11 +90,6 @@ ActiveRecord::Schema.define(:version => 20120328094139) do
     t.string "name"
     t.string "route"
     t.string "type"
-  end
-
-  create_table "willow_trees", :force => true do |t|
-    t.string "name"
-    t.text   "description"
   end
 
 end

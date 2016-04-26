@@ -6,7 +6,6 @@ development:
   pool: 5
   username: root
   password: tmedia
-  socket: /tmp/mysql.sock
 
 production:
   adapter: mysql2
@@ -16,4 +15,3 @@ production:
   pool: 5
   username: schoolhe_schoolh
   password: healthy47#!
-  socket: /tmp/mysql.sock

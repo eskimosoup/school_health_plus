@@ -19,7 +19,7 @@
           <h2 class="title_long"><%= link_to "School Health Plus", @shp_branch.destination %></h2>
 
           <div id="school_health_plus_scroller">
-            <% @shp_branch.children.position[0..2].each do |branch| %>
+            <% @shp_branch.children.order(:position).limit(3).each do |branch| %>
 	            <div class="col">
                 <% if branch.leaf.image? %>
                   <%= image_tag(branch.leaf.image.index, :width=>"161", :height=>"91") %>

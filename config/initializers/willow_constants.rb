@@ -3,6 +3,7 @@ WillowLeaves = {'Dynamic Page' => 'Page',
   'Static Page' => 'Willow::StaticPage',
   'Branch' => 'Willow::Branch'
 }
+WillowTrees = ['Top', 'Main', 'Footer']
 
 HomePage = Page.where(:home_page => true).first || Page.where(:title => "Home").first
 ContactPage = Page.where(:contact_page => true).first || Page.where(:title => "Contact Us").first

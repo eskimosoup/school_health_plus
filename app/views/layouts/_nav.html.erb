@@ -1,5 +1,5 @@
 <div class="navigation">
-  <% Willow::Tree.find_by_name('Main').branches.roots.position.each do |branch| %>
+  <% Willow::Branch.where(:tree => 'Main').roots.order(:position).each do |branch| %>
     <% options = {} %>
     <% if @current_leaf and (@current_leaf.branch == branch or @current_leaf.branch.parent == branch) %>
       <% options.merge!({:class => 'highlight'}) %>

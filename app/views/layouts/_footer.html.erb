@@ -7,7 +7,7 @@
     </div>
     <div class="footer_right">
       <p>
-        <% Willow::Tree.find_by_name("Footer").branches.position.each_with_index do |branch, i| %>
+      <% Willow::Branch.where(:tree => "Footer").order(:position).each_with_index do |branch, i| %>
           <%= "/" unless i.zero? %>
           <%= link_to branch.name, branch.try(:destination) %>
         <% end %>
