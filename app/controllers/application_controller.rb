@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   
   def site_map
 		@branch   = Willow::Branch.find_by_name("Site Map")
-    @branches = Willow::Branch.where(tree: 'Main').branches.order(:positions_depth_cache)
+    @branches = Willow::Branch.where(tree: 'Main').order(:positions_depth_cache)
   end
   
   def contact_us
