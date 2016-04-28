@@ -23,7 +23,7 @@ class PagesController < ApplicationController
   
   def snp
     if branch = Willow::Branch.where(:name => 'School Health Plus').first
-      @right_pages = branch.children.position.map{|x| x.leaf}.select{|x| x.class == Page}
+      @right_pages = branch.children.order(:position).map{|x| x.leaf}.select{|x| x.class == Page}
     end
   end
   
